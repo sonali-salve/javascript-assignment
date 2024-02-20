@@ -25,7 +25,8 @@ function factorial(num){
     }
     console.log(`factorial of giiven number is ${result}`);
 }
-let n=prompt("Enter a number : ");
+let n=prompt("Enter a number : ");//prompt takes input as string even if we are giving number 
+n=parseInt(n);                     //that's the reason I takes parseInt to change input type
 factorial(n); //function calling
 
 
@@ -134,7 +135,7 @@ console.log(`Number of vowels is ${checkVowels("javascript tutorial")}`);
 
 function perfectNum(num){
     let sum=0;
-    for(let i=1;i<num;i++){
+    for(let i=1;i<=num/2;i++){
         if(num%i==0){
             sum+=i;
         }
@@ -146,7 +147,7 @@ function perfectNum(num){
         console.log(`Number ${num} is not perfect number`);
     }
 }
-perfectNum(7); //function calling
+perfectNum(6); //function calling
 
 
 // Assignment 9:
@@ -156,7 +157,7 @@ function fibonacciSer(value){
     let a,b;
     a=0;
     b=1;
-
+    console.log("Fibonacci series : ->")
     for(let i=1;i<=value;i++){
         console.log(a);
         let temp = a+b;
