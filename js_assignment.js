@@ -67,17 +67,19 @@ function primeNum(num){
     let count;
     for(let i=2;i<=num;i++){
         count=0;
-        for(j=1;j<=num;j++){
+        for(j=2;j<i;j++){
             if(i%j==0){
-                count++;
+                count=1;
+                break;
             }
         }
-        if(count==2){
+        if(count==0){
             console.log(`Number ${i} is a prime number`);
         }
     }
+    
 }
-primeNum(5); //function calling
+primeNum(20); //function calling
 
 // Assignment 6:
 // Write a JavaScript function that simulates a simple calculator. 
@@ -165,7 +167,7 @@ function fibonacciSer(value){
         b=temp;
     }
 }
-fibonacciSer(10);  //function caliing
+fibonacciSer(15);  //function caliing
 
 
 
